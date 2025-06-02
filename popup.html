@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calme</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Calme</h1>
+    </header>
+    
+    <div class="tabs">
+      <button class="tab-button active" data-tab="sos">SOS</button>
+      <button class="tab-button" data-tab="videos">Мои видео</button>
+    </div>
+    
+    <div class="tab-content">
+      <!-- SOS Tab (показывается по умолчанию) -->
+      <div id="sos" class="tab-pane active">
+        <div class="sos-container">
+          <button id="sos-button">SOS</button>
+          <p>Нажмите кнопку, когда нужна мотивация</p>
+        </div>
+      </div>
+      
+      <!-- Videos Tab (управление видео) -->
+      <div id="videos" class="tab-pane">
+        <div class="video-form">
+          <input type="text" id="video-url" placeholder="Вставьте ссылку на видео">
+          <input type="text" id="video-title" placeholder="Название видео (необязательно)">
+          <button id="add-video">Добавить</button>
+        </div>
+        
+        <div class="video-list">
+          <!-- Здесь будет список сохраненных видео -->
+          <ul id="saved-videos"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 

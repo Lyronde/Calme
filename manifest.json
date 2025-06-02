@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+
+  "name": "Calme",
+
+  "description": "Сохраняйте мотивационные видео и получайте мотивацию, когда она нужна больше всего",
+  
+  "version": "1.0.0",
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Calme - ваша мотивация"
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  
+  "host_permissions": [
+    "https://*.example.com/*"
+  ],
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*", "fonts/*"],
+      "matches": ["https://*.example.com/*"]
+    }
+  ],
+  
+  "options_page": "options.html",
+  
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+C",
+        "mac": "Command+Shift+C"
+      },
+      "description": "Открыть Calme"
+    }
+  }
+} 
